@@ -1,5 +1,5 @@
-﻿using EasyWork.Maui.Data;
-using Microsoft.Extensions.Logging;
+﻿using EasyWork.Blazor.Data;
+using Microsoft.AspNetCore.Components.WebView.Maui;
 
 namespace EasyWork.Maui
 {
@@ -16,10 +16,8 @@ namespace EasyWork.Maui
                 });
 
             builder.Services.AddMauiBlazorWebView();
-
 #if DEBUG
 		builder.Services.AddBlazorWebViewDeveloperTools();
-		builder.Logging.AddDebug();
 #endif
 
             builder.Services.AddSingleton<WeatherForecastService>();
